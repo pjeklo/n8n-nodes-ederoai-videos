@@ -1,0 +1,58 @@
+{
+  "name": "n8n-nodes-ederoai-videos",
+  "version": "1.0.0",
+  "description": "n8n community node for edero.ai video automation",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "ederoai",
+    "videos"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/pjeklo/n8n-nodes-ederoai-videos",
+  "author": {
+    "name": "edero.ai Corporation",
+    "email": "support@edero.ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pjeklo/n8n-nodes-ederoai-videos.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx rimraf dist && tsc",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/EderoAiClientVideosApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Quiz.node.js",
+      "dist/nodes/FakeText.node.js",
+      "dist/nodes/RedditStory.node.js",
+      "dist/nodes/TaskStatus.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "~8.32.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
