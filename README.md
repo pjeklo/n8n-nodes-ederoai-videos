@@ -1,8 +1,17 @@
 # n8n-nodes-ederoai-videos
+<div align="center">
+  <img src="https://edero.ai/wp-content/uploads/2021/01/edero.png" alt="edero.ai" height="64" >
+  <br>
+  <strong>Powered by <a href="https://edero.ai/">edero.ai</a></strong>
+</div>
 
-This is an n8n community node. It lets you use Edero.ai in your n8n workflows.
+[![edero.ai](https://img.shields.io/badge/Powered%20by-edero.ai-FF6B35?style=flat&logo=video&logoColor=white)](https://edero.ai/)
+[![n8n](https://img.shields.io/badge/n8n-Community%20Node-EA4B71?style=flat)](https://n8n.io/)
+[![npm](https://img.shields.io/npm/v/n8n-nodes-ederoai-videos?color=CB3837&logo=npm)](https://www.npmjs.com/package/n8n-nodes-ederoai-videos)
 
-Edero.ai is an AI-powered video creation platform that lets you generate quiz, fake text, and story videos programmatically, and track their status.
+This is an n8n community node. It lets you use **[edero.ai](https://edero.ai/)** in your n8n workflows.
+
+**[edero.ai](https://edero.ai/)** is an AI-powered video creation platform that lets you generate quiz, fake text, and story videos programmatically, and track their status.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
@@ -11,63 +20,66 @@ Edero.ai is an AI-powered video creation platform that lets you generate quiz, f
 [Credentials](#credentials)  
 [Compatibility](#compatibility)  
 [Usage](#usage)  
-[Resources](#resources)
+[Resources](#resources)  
 
----
-
-## Installation
+## 📦 Installation
 
 Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
 
-Install this package in your n8n instance:
-```sh
-npm install @edero.ai/n8n-nodes-videos
+Install this package:
+```
+npm install n8n-nodes-ederoai-videos
 ```
 
----
+## 🎬 Operations
 
-## Operations
+This node supports the following **[edero.ai](https://edero.ai/)** operations:
 
-This node supports the following operations:
+- 🧠 **Create Quiz Video**: Generate interactive quiz videos from questions and answers
+- 💬 **Create Fake Text Video**: Generate realistic text conversation videos
+- 📖 **Create Reddit Story Video**: Generate videos from Reddit posts or custom stories  
+- 📊 **Get Task Status**: Check the status and retrieve results of video generation tasks
 
-- **Create Quiz Video**: Generate a quiz video from questions and answers.
-- **Create Fake Text Video**: Generate a fake text conversation video.
-- **Create Reddit Story Video**: Generate a video from a Reddit post or custom story.
-- **Get Task Status**: Check the status of a video generation task by Task ID.
+## 🔐 Credentials
 
----
+To use this node, you need an **[edero.ai](https://edero.ai/)** API key.
 
-## Credentials
+**Prerequisites:**
+- 🚀 Sign up for an account at [edero.ai](https://app.edero.ai/)
 
-To use this node, you need an Edero.ai API key.
+**Setup:**
+1. 🔑 Log in to your [edero.ai dashboard](https://app.edero.ai/)
+2. 🔧 Navigate to [Integrations](https://app.edero.ai/integrations) 
+3. ⚡ Generate a new API key
+4. 📝 In n8n, create a new credential of type "edero.ai Videos API"
+5. ✅ Enter your API key in the credential configuration
 
-1. [Sign up or log in to Edero.ai](https://app.edero.ai/)
-2. Go to [Edero.ai Integrations](https://app.edero.ai/integrations) and generate an API key.
-3. In n8n, add a new credential for "Edero.ai Videos API" (or `videos-client`).
-4. Paste your API key into the credential field.
-
----
-
-## Compatibility
+## ✅ Compatibility
 
 - **Minimum n8n version:** 1.0.0
-- **Tested with:** n8n 1.0.0 and above
+- **Tested with:** n8n 1.0.0+
 - **Known issues:** None
 
----
+## 🚀 Usage
 
-## Usage
+1. ➕ Add any of the **[edero.ai](https://edero.ai/)** nodes to your workflow (CreateQuizVideo, CreateFakeTextVideo, CreateRedditStoryVideo, or GetTaskStatus)
+2. 🔗 Configure the node with your **[edero.ai](https://edero.ai/)** credentials
+3. ⚙️ Fill in the required parameters for your chosen operation
+4. 📹 For video creation operations, save the returned `taskId` and use it with the GetTaskStatus node to monitor progress and retrieve the final video URL
 
-- Add the desired Edero.ai node (Quiz, FakeText, RedditStory, TaskStatus) to your workflow.
-- Fill in the required fields and connect your Edero.ai credential.
-- For video creation nodes, use the returned `taskId` with the TaskStatus node to check progress and get the final video link.
+> 💡 **Tip:** Video generation is asynchronous. Always use the GetTaskStatus node to check when your video is ready and get the download link.
 
-For more help, see the [Try it out](https://docs.n8n.io/try-it-out/) documentation.
+## 📚 Resources
 
----
+- 📖 [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
+- 🎬 [edero.ai API documentation](https://app.edero.ai/integrations)
+- 🌐 [edero.ai platform](https://edero.ai/)
 
-## Resources
-
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-* [Edero.ai documentation](https://app.edero.ai/integrations)
-* [Edero.ai website](https://edero.ai/) 
+<div align="center">
+  <br>
+  <strong>🎉 Ready to create amazing videos with AI?</strong>
+  <br>
+  <a href="https://app.edero.ai/">
+    <img src="https://img.shields.io/badge/Get%20Started-edero.ai-FF6B35?style=for-the-badge&logo=rocket&logoColor=white" alt="Get Started">
+  </a>
+</div>
