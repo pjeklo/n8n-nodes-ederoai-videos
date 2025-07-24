@@ -6,7 +6,7 @@ import {
   NodeConnectionType,
 } from "n8n-workflow";
 
-export class TaskStatus implements INodeType {
+export class GetTaskStatus implements INodeType {
   description: INodeTypeDescription = {
     displayName: "Get Task Status",
     name: "getTaskStatus",
@@ -38,7 +38,7 @@ export class TaskStatus implements INodeType {
   async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
     const items = this.getInputData();
     const returnData: INodeExecutionData[] = [];
-    const credentials = await this.getCredentials("videos-client");
+    const credentials = await this.getCredentials("edero-client-videos-Api");
     const BASE_URL = "https://app.edero.ai/api/public";
 
     for (let i = 0; i < items.length; i++) {
