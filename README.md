@@ -62,12 +62,13 @@ To use this node, you need an **[edero.ai](https://edero.ai/)** API key.
 
 ## 🚀 Usage
 
-1. ➕ Add any of the **[edero.ai](https://edero.ai/)** nodes to your workflow (CreateQuizVideo, CreateFakeTextVideo, CreateRedditStoryVideo, or GetTaskStatus)
-2. 🔗 Configure the node with your **[edero.ai](https://edero.ai/)** credentials
-3. ⚙️ Fill in the required parameters for your chosen operation
-4. 📹 For video creation operations, save the returned `taskId` and use it with the GetTaskStatus node to monitor progress and retrieve the final video URL
+1. ➕ Add the **Edero.ai Create Video** node to your workflow.
+2. 🔗 Configure the node with your **[edero.ai](https://edero.ai/)** credentials.
+3. ⚙️ Select the desired operation from the 'Operation' dropdown.
+4. 📝 Fill in the required parameters for your chosen operation.
+5. 📹 For video creation operations, save the returned `taskId` and use it with the 'Get Task Status' operation to monitor progress and retrieve the final video URL.
 
-> 💡 **Tip:** Video generation is asynchronous. Always use the GetTaskStatus node to check when your video is ready and get the download link.
+> 💡 **Tip:** Video generation is asynchronous. Always use the 'Get Task Status' operation to check when your video is ready and get the download link.
 
 ## 📚 Resources
 
