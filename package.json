@@ -39,10 +39,7 @@
       "dist/credentials/EderoAiClientVideosApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/Quiz/CreateQuizVideo.node.js",
-      "dist/nodes/FakeText/CreateFakeTextVideo.node.js",
-      "dist/nodes/RedditStory/CreateRedditStoryVideo.node.js",
-      "dist/nodes/TaskStatus/GetTaskStatus.node.js"
+      "dist/nodes/EderoAiClientVideos/EderoAiClientVideos.node.js"
     ]
   },
   "devDependencies": {
